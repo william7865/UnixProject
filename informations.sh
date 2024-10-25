@@ -27,7 +27,7 @@ while true; do
     zombies=$(ps aux | awk '$8 == "Z" {print $0}')
     if [ -n "$zombies" ]; then
         echo "$zombies" | head -n 2 | while read -r line; do
-            echo "Processus zombie : $line" >> "$log_fichier"
+            echo "Processus zombie detecter  : $line" >> "$log_fichier"
         done
     fi
 
